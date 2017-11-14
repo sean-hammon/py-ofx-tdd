@@ -23,3 +23,10 @@ class TestImportFile(unittest.TestCase):
         start, token = parser.get_token(text, start)
         start, token = parser.get_token(text, start)
         self.assertEqual(token, '<SIGNONMSGSRSV1>')
+
+    def test_get_bank_info(self):
+        importer = ImportOfx('sample.ofx')
+        data = importer.import_ofx()
+        self.assertIsNotNone(data.bank_info.routing_number)
+        self.assertIsNotNone(data.bank_info.account_number)
+        self.assertIsNotNone(data.bank_info.account_type)
