@@ -1,4 +1,5 @@
 import unittest
+from app.import_file.import_ofx import ImportOfx
 
 
 class TestImportFile(unittest.TestCase):
