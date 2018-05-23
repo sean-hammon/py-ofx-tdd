@@ -1,0 +1,82 @@
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+    <SIGNONMSGSRSV1>
+        <SONRS>
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <DTSERVER>20171106103406
+            <LANGUAGE>ENG
+        </SONRS>
+    </SIGNONMSGSRSV1>
+    <BANKMSGSRSV1>
+        <STMTTRNRS>
+            <TRNUID>0
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <STMTRS>
+                <CURDEF>USD
+                <BANKACCTFROM>
+                    <BANKID>123456789
+                    <ACCTID>00060000009
+                    <ACCTTYPE>CHECKING
+                </BANKACCTFROM>
+                <BANKTRANLIST>
+                    <DTSTART>20171101235959
+                    <DTEND>20171105235959
+                    <STMTTRN>
+                        <TRNTYPE>POS
+                        <DTPOSTED>20171105235959
+                        <TRNAMT>-000000126.97
+                        <FITID>1105171450 000000126.97WO00#956806         187913
+                        <NAME>WINCO FOODS # 73 7020 S Midvale<MEMO>POS W/D: #956806
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>CHECK
+                        <DTPOSTED>20171103235959
+                        <TRNAMT>-000000038.80
+                        <FITID>1103171050 000000038.80WD00220765
+                        <CHECKNUM>0000001119
+                        <NAME>Check W/D
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>DEBIT
+                        <DTPOSTED>20171101235959
+                        <TRNAMT>-000000370.00
+                        <FITID>1101171316 000000370.00WB00                302322
+                        <NAME>AmFirst Primary
+                        <MEMO>Bill Pmt W/D
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>DEP
+                        <DTPOSTED>20171101235959
+                        <TRNAMT>000000021.92
+                        <FITID>1101170202 000000021.92DE00EMPLOYER BOB198692
+                        <NAME>EMPLOYER BOB
+                        <MEMO>ACH Dep: EMPLOYER BOB
+                    </STMTTRN>
+                </BANKTRANLIST>
+                <LEDGERBAL>
+                    <BALAMT>21.29
+                    <DTASOF>20171106235959
+                </LEDGERBAL>
+                <AVAILBAL>
+                    <BALAMT>21.29
+                    <DTASOF>20171106235959
+                </AVAILBAL>
+            </STMTRS>
+        </STMTTRNRS>
+    </BANKMSGSRSV1>
+</OFX>
