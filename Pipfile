@@ -8,6 +8,7 @@ nose = "*"
 rednose = "*"
 colorama = "*"
 termstyle = "*"
+tinydb = "*"
 
 [dev-packages]
 
