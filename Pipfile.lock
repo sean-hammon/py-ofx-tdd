@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4098b439dda56bd2c328fbbcfca5b9fa04e695b7f66553a7c7cd35a6df820415"
+            "sha256": "197b029261d44ad64e414cd3fa3d59707dba95287b9d1f78c6ef5365240011c1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,16 @@
         ]
     },
     "default": {
+        "tinydb": {
+            "hashes": [
+                "sha256:c91f0bb2731a04cc2ec2b11474eb2097eee9490d44cf8709279bc546336a559e",
+                "sha256:d19fe16ee388ff8f03b9c10dce5cb0bba9cd2fbd5d100103114a1fb2224a84af"
+            ],
+            "index": "pypi",
+            "version": "==3.10.0"
+        }
+    },
+    "develop": {
         "colorama": {
             "hashes": [
                 "sha256:463f8483208e921368c9f306094eb6f725c6ca42b0f97e313cb5d5512459feda",
@@ -46,15 +56,6 @@
             ],
             "index": "pypi",
             "version": "==0.1.11"
-        },
-        "tinydb": {
-            "hashes": [
-                "sha256:c91f0bb2731a04cc2ec2b11474eb2097eee9490d44cf8709279bc546336a559e",
-                "sha256:d19fe16ee388ff8f03b9c10dce5cb0bba9cd2fbd5d100103114a1fb2224a84af"
-            ],
-            "index": "pypi",
-            "version": "==3.10.0"
         }
-    },
-    "develop": {}
+    }
 }

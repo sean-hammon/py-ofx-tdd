@@ -4,13 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-nose = "*"
-rednose = "*"
-colorama = "*"
-termstyle = "*"
 tinydb = "*"
 
 [dev-packages]
+colorama = "*"
+termstyle = "*"
+nose = "*"
+rednose = "*"
 
 [requires]
 python_version = "3.7"
