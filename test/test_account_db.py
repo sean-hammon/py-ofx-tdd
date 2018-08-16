@@ -3,6 +3,7 @@ from sqlite3 import OperationalError
 from nose.tools import raises
 from app.import_file.import_ofx import ImportOfx
 from app.db import TestDb
+from app.db.accounts import Accounts
 
 
 class TestAccountTable:
@@ -17,6 +18,7 @@ class TestAccountTable:
 
     def teardown(self):
         TestDb.close_connection()
+        TestDb.destroy()
 
     def test_db_exists(self):
         assert self.test_db is not None
@@ -25,3 +27,9 @@ class TestAccountTable:
     def test_accounts_table_empty(self):
         cursor = self.test_db.cursor()
         cursor.execute('''SELECT * from accounts''')
+
+    def test_accounts_create(self):
+        accounts = Accounts(TestDb)
+        accounts.create_table()
+        count = accounts.count()
+        assert count == 0
