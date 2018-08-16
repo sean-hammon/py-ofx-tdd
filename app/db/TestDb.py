@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 
 connection = None
@@ -13,8 +14,11 @@ def get_connection():
 
     return connection
 
+
 def close_connection():
     global connection
 
     if connection is not None:
         connection.close()
+
+    connection = None
