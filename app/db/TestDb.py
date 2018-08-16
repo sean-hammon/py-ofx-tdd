@@ -22,3 +22,7 @@ def close_connection():
         connection.close()
 
     connection = None
+
+
+def destroy():
+    os.remove(file_path)
