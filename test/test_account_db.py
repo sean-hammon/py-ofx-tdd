@@ -11,9 +11,13 @@ class TestAccountTable:
     test_db = None
     ofx_data = None
 
-    def setup(self):
+    @classmethod
+    def setup_class(cls):
         importer = ImportOfx('sample.ofx')
-        self.ofx_data = importer.import_ofx()
+        cls.ofx_data = importer.import_ofx()
+
+
+    def setup(self):
         self.test_db = TestDb.get_connection()
 
     def teardown(self):
