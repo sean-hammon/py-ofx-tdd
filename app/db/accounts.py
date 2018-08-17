@@ -1,3 +1,6 @@
+from app.import_file.ofx_bank import OfxBank
+
+
 class Accounts:
 
     connection = None
@@ -24,3 +27,19 @@ class Accounts:
         row = cursor.fetchone()
         return row[0]
 
+    def insert(self, account_obj: OfxBank):
+        cursor = self.connection.cursor()
+        sql = (
+            'INSERT INTO accounts'
+            ' ( routing_number, account_number, balance, available_balance ) '
+            ' VALUES '
+            ' ( ?, ?, ?, ? )'
+        )
+        data = (
+            account_obj.routing_number,
+            account_obj.account_number,
+            account_obj.balance,
+            account_obj.available_balance
+        )
+        cursor.execute(sql, data)
+        self.connection.commit()
