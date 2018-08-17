@@ -37,3 +37,11 @@ class TestAccountTable:
         accounts.create_table()
         count = accounts.count()
         assert count == 0
+
+    def test_account_insert(self):
+        accounts = Accounts(TestDb)
+        accounts.create_table()
+        pre_count = accounts.count()
+        accounts.insert(self.ofx_data.bank_info)
+        post_count = accounts.count()
+        assert post_count == pre_count + 1
