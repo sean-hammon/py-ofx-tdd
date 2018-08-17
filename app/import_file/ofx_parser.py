@@ -1,5 +1,5 @@
-from app.import_file.ofx_file import OfxFile
-from app.import_file.ofx_transaction import OfxTransaction
+from app.ofx.ofx_file import OfxFile
+from app.ofx.ofx_transaction import OfxTransaction
 
 
 class OfxParser:

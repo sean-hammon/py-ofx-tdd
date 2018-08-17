@@ -1,4 +1,4 @@
-from app.import_file.ofx_bank import OfxBank
+from app.ofx.ofx_bank import OfxBank
 
 
 class OfxFile:
