@@ -42,6 +42,8 @@ class TestAccountTable:
         accounts = Accounts(TestDb)
         accounts.create_table()
         pre_count = accounts.count()
-        accounts.insert(self.ofx_data.bank_info)
+        new_account = accounts.insert(self.ofx_data.bank_info)
         post_count = accounts.count()
         assert post_count == pre_count + 1
+        print(new_account)
+        assert new_account.id is not None
