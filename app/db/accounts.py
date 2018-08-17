@@ -43,4 +43,9 @@ class Accounts:
             account_obj.available_balance
         )
         cursor.execute(sql, data)
+        cursor.execute("SELECT last_insert_rowid()")
+        rowid = cursor.fetchone()
         self.connection.commit()
+        account_obj.id = rowid[0]
+
+        return account_obj
