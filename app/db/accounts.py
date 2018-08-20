@@ -32,13 +32,14 @@ class Accounts:
         cursor = self.connection.cursor()
         sql = (
             'INSERT INTO accounts'
-            ' ( routing_number, account_number, balance, available_balance ) '
+            ' ( routing_number, account_number, account_type, balance, available_balance ) '
             ' VALUES '
             ' ( ?, ?, ?, ? )'
         )
         data = (
             account_obj.routing_number,
             account_obj.account_number,
+            account_obj.account_type,
             account_obj.balance,
             account_obj.available_balance
         )
