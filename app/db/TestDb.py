@@ -3,7 +3,7 @@ import os
 
 
 connection = None
-file_path = "data/test.db"
+file_path = "sqlite/test.db"
 
 
 def get_connection():
