@@ -22,9 +22,9 @@ except OperationalError:
 migration_files = os.listdir('./sqlite/migrations')
 for migration in migration_files:
     if migration not in completed:
-        sql = f"INSERT INTO migrations (filename, executed_at) VALUES ('{migration}', date('now'))"
+        sql = "INSERT INTO migrations (filename, executed_at) VALUES ('{}', date('now'))".format(migration)
         cursor.execute(sql)
-        with open(f'./sqlite/migrations/{migration}') as file:
+        with open('./sqlite/migrations/{}'.format(migration)) as file:
             sql = file.read()
             cursor.execute(sql)
         connection.commit()
